@@ -5,5 +5,7 @@ You can get the different time periods individually or all at once
 
 ## Usage
 
-run it with `cabal run campusdish-scraper -- <date> <period>`
+Install cabal and run it with `cabal run campusdish-scraper <date offset> <period>`
 where the period is `breakfast`, `lunch`, `dinner` or `all`.
+
+for example `campusdish-scraper 1 dinner` would get dinner tommorow.
