@@ -88,7 +88,7 @@ parseResponse obj = do
     pure (items, stationNames)
 
 generateMarkdown :: M.Map T.Text [Item] ->  M.Map T.Text T.Text -> T.Text
-generateMarkdown itemMap stations = foldl stationItems "" (M.toList itemMap)
+generateMarkdown itemMap stations = foldl stationItems "" (M.toList itemMap) <> "\\pagebreak\n"
     where
         stationItems :: T.Text -> (T.Text, [Item]) -> T.Text
         stationItems acc (stationID, items) = "### " <> (stations M.! stationID) <> "\n"

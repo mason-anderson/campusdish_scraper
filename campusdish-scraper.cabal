@@ -28,10 +28,10 @@ executable campusdish-scraper
     -- other-modules:
 
     -- LANGUAGE extensions used by modules in this package.
-    extensions:
+    default-extensions:
         OverloadedStrings
     build-depends:
-        base ^>=4.15.1.0
+        base
       , req
       , text
       , aeson
